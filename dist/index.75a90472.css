@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+.header {
+  border: 1px solid #000;
+  justify-content: space-between;
+  display: flex;
+}
+
+.nav-items > ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-items > ul > li {
+  padding: 15px;
+}
+
+.logo {
+  width: 75px;
+}
+
+.card {
+  border: 1px solid #000;
+  width: 200px;
+  padding: 10px;
+}
+
+.card > img {
+  width: 100%;
+  margin: 0;
+}
+
+.restaurant-list {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.shimmer-body {
+  display: flex;
+}
+
+.shimmer-body-child {
+  background-color: #fdfcf70a;
+  width: 30%;
+  margin: 10px;
+}
+/*# sourceMappingURL=index.75a90472.css.map */
