@@ -3,6 +3,9 @@
     margin:10px;
     box-sizing:border-box;
 }
+a{
+    text-decoration: none;
+}
 .header{
     display:flex;
     justify-content:space-between;
@@ -25,6 +28,8 @@
     width:200px;
     border:1px solid black;
     padding:10px;
+    min-height:500px;
+    box-shadow: 10px 10px 5px rgb(243, 170, 102);
 
 }
 .card>img{
@@ -36,11 +41,13 @@
     display:flex;
     flex-wrap: wrap;
 }
-.shimmer-body{
-    display:flex;
+
+.shimmer-card{
+   width:200px;
+   height:200px;
+   background:lightgray;
+   margin:10px;
 }
-.shimmer-body-child{
-    width:30%;
-    margin:10px;
-    background-color: rgba(253, 252, 247, 0.041);
+Link{
+    text-decoration:none;
 }

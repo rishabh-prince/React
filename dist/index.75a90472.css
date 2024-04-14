@@ -3,6 +3,10 @@
   margin: 10px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header {
   border: 1px solid #000;
   justify-content: space-between;
@@ -25,7 +29,9 @@
 .card {
   border: 1px solid #000;
   width: 200px;
+  min-height: 500px;
   padding: 10px;
+  box-shadow: 10px 10px 5px #f3aa66;
 }
 
 .card > img {
@@ -38,13 +44,14 @@
   display: flex;
 }
 
-.shimmer-body {
-  display: flex;
+.shimmer-card {
+  background: #d3d3d3;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
 }
 
-.shimmer-body-child {
-  background-color: #fdfcf70a;
-  width: 30%;
-  margin: 10px;
+Link {
+  text-decoration: none;
 }
 /*# sourceMappingURL=index.75a90472.css.map */
