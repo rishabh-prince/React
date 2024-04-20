@@ -10,6 +10,7 @@ a {
 .header {
   border: 1px solid #000;
   justify-content: space-between;
+  align-items: center;
   display: flex;
 }
 
