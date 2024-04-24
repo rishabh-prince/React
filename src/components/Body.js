@@ -32,19 +32,19 @@ const Body=()=>{
     
     return (
         <>
-        <div className="search-container">
-            <input type="text" className="search-input" placeholder="search for your favourite food" value={searchinput}
+        <div className="search-container p-5 bg-pink-50 my-5 mx-2 ">
+            <input type="text" className="focus:bg-green-200" placeholder="search" value={searchinput}
             onChange={(e)=>{
                 setSearchinput(e.target.value);
             }}></input>
-            <button className="search-button"
+            <button className="p-2 m-2 bg-purple-900 hover:bg-red-400 text-white rounded-md"
             onClick={()=>{
                const data=filterData(searchinput.toLowerCase(),allrestaurants);
                setFilteredRestaurants(data);
             }}>search</button>
             
         </div>
-        <div className="restaurant-list">  
+        <div className="flex flex-wrap">  
           { 
           filteredrestaurants?.length===0?<Message/>:
           filteredrestaurants?.map((restaurant)=>{
