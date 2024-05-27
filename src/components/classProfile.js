@@ -1,4 +1,5 @@
 import React from "react";
+import UserContext from "../Utils/Usercontext";
 
 class Profile extends React.Component{
   constructor(props){
@@ -14,15 +15,13 @@ class Profile extends React.Component{
   }
   
   async componentDidMount(){
-    
-   
-    const data=await fetch("https://api.github.com/users/akshaymarch7");
+    const data=await fetch("https://api.github.com/users/rishabh-prince");
     const jsondata=await data.json();
-    console.log(jsondata);
+    // console.log(jsondata);
     this.setState({
      userInfo:jsondata,
     });
-    console.log("child componentdidmount");
+    // console.log("child componentdidmount");
    }
    componentDidUpdate(){
     console.log("child componentDidUpdate");
@@ -30,26 +29,20 @@ class Profile extends React.Component{
    // it will unmount form DOM when we will move from this page other page and then this function will be called
    // All the cleaning of compnentDidupdate takes place in it.
    componentWillUnmount(){
-    console.log("child componentWillUnmount");
+    // console.log("child componentWillUnmount");
    }
   render(){
-    const {count}=this.state;
-    console.log("render" + this.props.name);
+    // console.log("render" + this.props.name);
     const {name,location,avatar_url}=this.state.userInfo;
-    return <>
-    <h2>Profile</h2>
-    <img src={avatar_url}/>
-    <h2>Name :{name}</h2>
+    return <div className="flex justify-between m-5">
+      <div>
+    <h2 className="font-medium my-2">Profile</h2>
+    
+    <UserContext.Consumer>{({loggedInUser})=><h2>Name :{loggedInUser}</h2>}</UserContext.Consumer>
     <h2>Location : {location}</h2>
-    <h3>{count}</h3>
-    <button onClick={
-      ()=>{
-        this.setState({
-          count:1,
-        },)
-      }
-    }>Click me</button>
-    </>
+    </div>
+    <img className="rounded-full w-52 h-52" src={avatar_url}/>
+    </div>
   }
 }
 export default Profile;

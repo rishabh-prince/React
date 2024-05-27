@@ -18,8 +18,9 @@ class About extends React.Component{
   }
     render(){
         console.log("parent-render");
-        return  (<>
-             <h1>This is Namaste React Course</h1>
+        return  (<> 
+        <h1 className="text-center my-5 font-semibold">This is official website of food villa</h1>
+            
              <Profile name={"child"}/>
              
                </> );
